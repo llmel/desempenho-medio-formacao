@@ -9,10 +9,82 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:text="Nota 4º Semestre"
+        android:textSize="40sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:id="@+id/titulo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Informe seu desempenho e diremos quanto você precisa para se formar com um desempenho comum no seu curso"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textStyle="italic"
+        android:id="@+id/descricao"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Coloque apenas números inteiros, entre 5 e 10"
+        android:textSize="15sp"
+        android:textColor="#000000"
+        android:textStyle="italic"
+        android:id="@+id/tv_obs"
+        app:layout_constraintTop_toBottomOf="@id/descricao"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Seu Nome"
+        android:textSize="30sp"
+        android:id="@+id/et_nome"
+        app:layout_constraintTop_toBottomOf="@id/tv_obs"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nota Geral 1º Semestre"
+        android:textSize="30sp"
+        android:inputType="number"
+        android:id="@+id/et_n1"
+        app:layout_constraintTop_toBottomOf="@id/et_nome"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nota Geral 2º Semestre"
+        android:textSize="30sp"
+        android:inputType="number"
+        android:id="@+id/et_n2"
+        app:layout_constraintTop_toBottomOf="@id/et_n1"
+        />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nota Geral 3º Semestre"
+        android:textSize="30sp"
+        android:inputType="number"
+        android:id="@+id/et_n3"
+        app:layout_constraintTop_toBottomOf="@id/et_n2"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_calcular"
+        android:text="Calcular Nota Necessária"
+        app:layout_constraintTop_toBottomOf="@id/et_n3"
+        android:textSize="20sp"
+        android:onClick="calcularNota"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_resultado"
+        app:layout_constraintTop_toBottomOf="@id/bt_calcular"
+        android:textSize="20sp"
+        android:layout_marginTop="25dp"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
